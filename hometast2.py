@@ -15,20 +15,32 @@ def factorial(num):
 
 # Задача 2. Выведите таблицу истинности для выражения ¬(X ∧ Y) ∨ Z.
 def task2():
-    print("Задача 2")
+    print("\nЗадача 2")
     print("X | Y | Z | ¬(X ∧ Y) ∨ Z")
     for x in range(0, 2):
         for y in range(0, 2):
             for z in range(0, 2):
                 print(f"{x} | {y} | {z} | {int(not(x and y) or z)}")
 
+# Задача 3. Даны две строки. Посчитайте сколько раз каждый символ первой строки встречается во второй
+# «one» «onetwonine» - o – 2, n – 3, e – 2
+def task3():
+    print("\nЗадача 3")
+    string1 = input("Введите первую строку: ")
+    string2 = input("Введите вторую строку: ")
+    for i in string1:
+        print(f"'{i}' = {countChars(i, string2)}")
 
-
-
-
+def countChars(chr, text):
+    count = 0
+    for i in text:
+        if i == chr:
+            count += 1
+    return count
 
 
 
 
 #task1()
-task2()
+#task2()
+task3()
