@@ -38,9 +38,22 @@ def countChars(chr, text):
             count += 1
     return count
 
+# Задача 4. Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
+# Сдвиньте все элементы списка на 2 позиции вправо.
+# 3 -> [2, 3, -3, -2, -1, 0, 1]
+def task4():
+    print("\nЗадача 4")
+    number = abs(int(input("введите число N: ")))
+    shiftPos = 2
+    lst = list(range(-number, number + 1))
+    lst = shiftElementsRight(lst, shiftPos)
+    print(lst)
+
+def shiftElementsRight(lst, positions):
+    return lst[-positions:] + lst[:-positions]
 
 
-
-#task1()
-#task2()
+task1()
+task2()
 task3()
+task4()
